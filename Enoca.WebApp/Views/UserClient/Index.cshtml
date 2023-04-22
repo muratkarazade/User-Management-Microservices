@@ -1,0 +1,76 @@
+﻿@model IEnumerable<User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Email</td>
+                <td>@item.Username</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/api/UserManagement",
+                contentType: "application/json",
+                success: function (data) {
+                    var tbody = "";
+                    $.each(data, function (_, item) {
+                        tbody += `
+                                    <tr>
+                                        <td>${item.id}</td>
+                                        <td>${item.name}</td>
+                                        <td>${item.surname}</td>
+                                        <td>${item.email}</td>
+                                        <td>${item.username}</td>
+                                        <td>
+                                            <a href="/UserManagement/Details/${item.id}" class="btn btn-info">Details</a> |
+                                            <a href="/UserManagement/Edit/${item.id}" class="btn btn-secondary">Edit</a> |
+                                            <a href="/UserManagement/Delete/${item.id}" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                `;
+                    });
+
+                    $("table tbody").html(tbody);
+                }
+            });
+        });
+    </script>
+}
+*@

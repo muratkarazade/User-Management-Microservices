@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qNgxX2bQIyNwo/vApWYRYnVbBsyZk5g+F+dEiujcylA=",
+  "Source": "Enoca.APIGateway",
+  "BasePath": "_content/Enoca.APIGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

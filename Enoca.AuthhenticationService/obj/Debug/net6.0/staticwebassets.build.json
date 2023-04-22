@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0FCKfEkXusWfoqRbQb1cTGOM3Ci4UxLvp2p3yTlDhQE=",
+  "Source": "Enoca.AuthhenticationService",
+  "BasePath": "_content/Enoca.AuthhenticationService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
